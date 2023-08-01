@@ -79,4 +79,6 @@ int main() {
     std::cout << "\n" << "Второй адрес:" << "\n" << "\n";
 
     address_output(a2);
+
+    return 0;
 }

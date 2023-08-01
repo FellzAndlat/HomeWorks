@@ -1,41 +1,59 @@
 #include <iostream>
 
+enum class months {
+	January = 1,
+	February,
+	March,
+	April,
+	May,
+	June,
+	July,
+	August,
+	September,
+	October,
+	November,
+	December,	
+};
+
 void EnumerationOfMonths(int number) {
-	switch (number) {
-	case 1:
+	months m = static_cast<months>(number);
+
+	switch (m) {
+
+	case months::January:
 		std::cout << "Январь" << "\n";
 		break;
-	case 2:
+	case months::February:
 		std::cout << "Февраль" << "\n";
 		break;
-	case 3:
+	case months::March:
 		std::cout << "Март" << "\n";
 		break;
-	case 4:
+	case months::April:
 		std::cout << "Апрель" << "\n";
 		break;
-	case 5:
+	case months::May:
 		std::cout << "Май" << "\n";
 		break;
-	case 6:
+	case months::June:
 		std::cout << "Июнь" << "\n";
 		break;
-	case 7:
+	case months::July:
 		std::cout << "Июль" << "\n";
 		break;
-	case 8:
+	case months::August:
 		std::cout << "Август" << "\n";
 		break;
-	case 9:
+	case months::September:
 		std::cout << "Сентябрь" << "\n";
 		break;
-	case 10:
+	case months::October:
 		std::cout << "Октябрь" << "\n";
 		break;
-	case 11:
+	case months::November:
 		std::cout << "Ноябрь" << "\n";
 		break;
-	case 12:
+	case months::December:
 		std::cout << "Декабрь" << "\n";
 		break;
 	}
