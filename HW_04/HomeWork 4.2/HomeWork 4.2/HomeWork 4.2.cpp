@@ -11,17 +11,8 @@ private:
     int apartments;
     std::string str;
 public:
-    void sort(address* all_add, int quantity) {
-        address temp;
-        for (int i = 0; i < quantity - 1; i++) {
-            for (int j = 0; j < quantity - i - 1; j++) {
-                if (all_add[j].city < all_add[j + 1].city) {
-                    temp = all_add[j];
-                    all_add[j] = all_add[j + 1];
-                    all_add[j + 1] = temp;
-                }
-            }
-        }
+    std::string get_city() {
+        return city;
     }
     void conclusion(std::ofstream& fout) {
         fout << city << ", " << street << ", " << home << ", " << apartments << '\n';
@@ -37,6 +28,19 @@ public:
         file >> apartments;
     }
 };
+
+void sort(address* all_add, int quantity) {
+    address temp;
+    for (int i = 0; i < quantity - 1; i++) {
+        for (int j = 0; j < quantity - i - 1; j++) {
+            if (all_add[j].get_city() < all_add[j + 1].get_city()) {
+                temp = all_add[j];
+                all_add[j] = all_add[j + 1];
+                all_add[j + 1] = temp;
+            }
+        }
+    }
+}
 
 
 int main() {
@@ -64,7 +68,7 @@ int main() {
         all_add[i] = address(file);
     }
 
-    all_add->sort(all_add, quantity);
+    sort(all_add, quantity);
 
     for (int i = quantity - 1; i >= 0; --i) {
         all_add[i].conclusion(fout);
@@ -73,5 +77,7 @@ int main() {
     file.close();
     fout.close();
     delete[] all_add;
+
+    return 0;
 
 }
