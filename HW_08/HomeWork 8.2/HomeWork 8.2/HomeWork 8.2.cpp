@@ -100,7 +100,7 @@ int main() {
     }
 
     for (int i = 0; i < all_figure.size(); ++i) {
-        delete[] all_figure[i];
+        delete all_figure[i];
     }
 
 
