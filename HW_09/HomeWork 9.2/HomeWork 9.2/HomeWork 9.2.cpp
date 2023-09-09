@@ -9,7 +9,7 @@ private:
 
 public:
 	Fraction& operator ++ () {
-		numerator_ += 4;
+		numerator_ += denominator_;
 		return *this;
 	}
 	Fraction operator ++ (int) {
@@ -18,7 +18,7 @@ public:
 		return temp;
 	}
 	Fraction& operator -- () {
-		numerator_ -= 4;
+		numerator_ -= denominator_;
 		denominator_;
 		return *this;
 	}
