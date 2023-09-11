@@ -1,0 +1,3 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(HomeWork_10.2)
+add_executable(HomeWork_10.2 HomeWork_10_2.cpp Creation_error.h Creation_error.cpp Equilateral_triangle.h Equilateral_triangle.cpp Figure.h Figure.cpp Isosceles_triangle.h Isosceles_triangle.cpp Parallelogram.h Parallelogram.cpp Quadrilateral.h Quadrilateral.cpp Rectangl.h Rectangl.cpp Rhombus.h Rhombus.cpp Right_triangle.h Right_triangle.cpp Square.h Square.cpp Triangle.h Triangle.cpp)

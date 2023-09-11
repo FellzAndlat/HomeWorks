@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: HomeWork_8.1
+# Project: HomeWork_10_1
 # Configurations: Debug
 # =============================================================================
 
@@ -41,40 +41,40 @@ include CMakeFiles\rules.ninja
 
 cmake_ninja_workdir = C$:\Users\mrsta\Project\HW_10\HomeWork$ 10.1\out\build\x64-Debug\
 # =============================================================================
-# Object build statements for EXECUTABLE target hello
+# Object build statements for EXECUTABLE target HomeWork_10_1
 
 
 #############################################
-# Order-only phony target for hello
+# Order-only phony target for HomeWork_10_1
 
-build cmake_object_order_depends_target_hello: phony || CMakeFiles\hello.dir
+build cmake_object_order_depends_target_HomeWork_10_1: phony || CMakeFiles\HomeWork_10_1.dir
 
-build CMakeFiles\hello.dir\source.cpp.obj: CXX_COMPILER__hello_unscanned_Debug C$:\Users\mrsta\Project\HW_10\HomeWork$ 10.1\source.cpp || cmake_object_order_depends_target_hello
+build CMakeFiles\HomeWork_10_1.dir\HomeWork_10_1.cpp.obj: CXX_COMPILER__HomeWork_10_1_unscanned_Debug C$:\Users\mrsta\Project\HW_10\HomeWork$ 10.1\HomeWork_10_1.cpp || cmake_object_order_depends_target_HomeWork_10_1
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
-  OBJECT_DIR = CMakeFiles\hello.dir
-  OBJECT_FILE_DIR = CMakeFiles\hello.dir
-  TARGET_COMPILE_PDB = CMakeFiles\hello.dir\
-  TARGET_PDB = hello.pdb
+  OBJECT_DIR = CMakeFiles\HomeWork_10_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\HomeWork_10_1.dir
+  TARGET_COMPILE_PDB = CMakeFiles\HomeWork_10_1.dir\
+  TARGET_PDB = HomeWork_10_1.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target hello
+# Link build statements for EXECUTABLE target HomeWork_10_1
 
 
 #############################################
-# Link the executable hello.exe
+# Link the executable HomeWork_10_1.exe
 
-build hello.exe: CXX_EXECUTABLE_LINKER__hello_Debug CMakeFiles\hello.dir\source.cpp.obj
+build HomeWork_10_1.exe: CXX_EXECUTABLE_LINKER__HomeWork_10_1_Debug CMakeFiles\HomeWork_10_1.dir\HomeWork_10_1.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\hello.dir
+  OBJECT_DIR = CMakeFiles\HomeWork_10_1.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\hello.dir\
-  TARGET_FILE = hello.exe
-  TARGET_IMPLIB = hello.lib
-  TARGET_PDB = hello.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\HomeWork_10_1.dir\
+  TARGET_FILE = HomeWork_10_1.exe
+  TARGET_IMPLIB = HomeWork_10_1.lib
+  TARGET_PDB = HomeWork_10_1.pdb
 
 
 #############################################
@@ -102,7 +102,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build hello: phony hello.exe
+build HomeWork_10_1: phony HomeWork_10_1.exe
 
 # =============================================================================
 # Folder targets.
@@ -112,7 +112,7 @@ build hello: phony hello.exe
 #############################################
 # Folder: C:/Users/mrsta/Project/HW_10/HomeWork 10.1/out/build/x64-Debug
 
-build all: phony hello.exe
+build all: phony HomeWork_10_1.exe
 
 # =============================================================================
 # Built-in targets

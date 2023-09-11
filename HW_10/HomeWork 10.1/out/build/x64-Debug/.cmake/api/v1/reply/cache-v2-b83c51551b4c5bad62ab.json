@@ -723,7 +723,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "HomeWork_8.1"
+			"value" : "HomeWork_10_1"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1066,7 +1066,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "HomeWork_8.1_BINARY_DIR",
+			"name" : "HomeWork_10_1_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1078,7 +1078,7 @@
 			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.1/out/build/x64-Debug"
 		},
 		{
-			"name" : "HomeWork_8.1_IS_TOP_LEVEL",
+			"name" : "HomeWork_10_1_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1090,7 +1090,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "HomeWork_8.1_SOURCE_DIR",
+			"name" : "HomeWork_10_1_SOURCE_DIR",
 			"properties" : 
 			[
 				{

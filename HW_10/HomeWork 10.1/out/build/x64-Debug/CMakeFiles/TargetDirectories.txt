@@ -1,3 +1,3 @@
-C:/Users/mrsta/Project/HW_10/HomeWork 10.1/out/build/x64-Debug/CMakeFiles/hello.dir
+C:/Users/mrsta/Project/HW_10/HomeWork 10.1/out/build/x64-Debug/CMakeFiles/HomeWork_10_1.dir
 C:/Users/mrsta/Project/HW_10/HomeWork 10.1/out/build/x64-Debug/CMakeFiles/edit_cache.dir
 C:/Users/mrsta/Project/HW_10/HomeWork 10.1/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

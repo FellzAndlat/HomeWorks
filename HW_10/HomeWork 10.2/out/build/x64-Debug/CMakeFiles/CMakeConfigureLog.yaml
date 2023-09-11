@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.22621 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe 
@@ -39,7 +39,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/3.26.0-msvc3/CompilerIdC/CMakeCCompilerId.exe
+        C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/3.26.0-msvc3/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
@@ -47,11 +47,11 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1153 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Detecting C compiler /showIncludes prefix:
         main.c
-        Note: including file: C:\\Users\\mrsta\\Project\\HW_10\\HomeWork 10.2\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: C:\\Users\\mrsta\\Project\\HW_10\\HomeWork 10.2\\HomeWork 10.2\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -60,7 +60,7 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe 
@@ -85,7 +85,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/3.26.0-msvc3/CompilerIdCXX/CMakeCXXCompilerId.exe
+        C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/3.26.0-msvc3/CompilerIdCXX/CMakeCXXCompilerId.exe
       
   -
     kind: "message-v1"
@@ -93,11 +93,11 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1153 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Detecting CXX compiler /showIncludes prefix:
         main.c
-        Note: including file: C:\\Users\\mrsta\\Project\\HW_10\\HomeWork 10.2\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: C:\\Users\\mrsta\\Project\\HW_10\\HomeWork 10.2\\HomeWork 10.2\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -105,22 +105,24 @@ events:
     backtrace:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-scfhdd"
-      binary: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-scfhdd"
+      source: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n0dlr6"
+      binary: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n0dlr6"
     cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-scfhdd
+        Change Dir: C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n0dlr6
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_67d6d && [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_67d6d.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_67d6d.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_67d6d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_67d6d.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_67d6d.exe /implib:cmTC_67d6d.lib /pdb:cmTC_67d6d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_08898 && [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_08898.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_08898.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_08898.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_08898.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_08898.exe /implib:cmTC_08898.lib /pdb:cmTC_08898.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -128,22 +130,24 @@ events:
     backtrace:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-z5gh2s"
-      binary: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-z5gh2s"
+      source: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-fu9xm9"
+      binary: "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-fu9xm9"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-z5gh2s
+        Change Dir: C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-fu9xm9
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_ca603 && [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ca603.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_ca603.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ca603.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ca603.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_ca603.exe /implib:cmTC_ca603.lib /pdb:cmTC_ca603.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_251ea && [1/2] C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_251ea.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_251ea.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_251ea.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_251ea.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_251ea.exe /implib:cmTC_251ea.lib /pdb:cmTC_251ea.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
 ...

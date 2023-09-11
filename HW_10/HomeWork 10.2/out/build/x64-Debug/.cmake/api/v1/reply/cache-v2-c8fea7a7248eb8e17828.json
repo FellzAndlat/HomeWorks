@@ -39,7 +39,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug"
+			"value" : "c:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -123,10 +123,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe"
 		},
 		{
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+			"value" : "/DWIN32 /D_WINDOWS /EHsc"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_DEBUG",
@@ -159,7 +159,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MDd /Zi /Ob0 /Od /RTC1"
+			"value" : "/Zi /Ob0 /Od /RTC1"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
@@ -175,7 +175,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MD /O1 /Ob1 /DNDEBUG"
+			"value" : "/O1 /Ob1 /DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_RELEASE",
@@ -191,7 +191,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MD /O2 /Ob2 /DNDEBUG"
+			"value" : "/O2 /Ob2 /DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",
@@ -207,7 +207,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MD /Zi /O2 /Ob1 /DNDEBUG"
+			"value" : "/Zi /O2 /Ob1 /DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_CXX_STANDARD_LIBRARIES",
@@ -235,10 +235,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe"
 		},
 		{
@@ -255,7 +255,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/DWIN32 /D_WINDOWS /W3"
+			"value" : "/DWIN32 /D_WINDOWS"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_DEBUG",
@@ -271,7 +271,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MDd /Zi /Ob0 /Od /RTC1"
+			"value" : "/Zi /Ob0 /Od /RTC1"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_MINSIZEREL",
@@ -287,7 +287,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MD /O1 /Ob1 /DNDEBUG"
+			"value" : "/O1 /Ob1 /DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_RELEASE",
@@ -303,7 +303,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MD /O2 /Ob2 /DNDEBUG"
+			"value" : "/O2 /Ob2 /DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_RELWITHDEBINFO",
@@ -319,7 +319,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/MD /Zi /O2 /Ob1 /DNDEBUG"
+			"value" : "/Zi /O2 /Ob1 /DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_STANDARD_LIBRARIES",
@@ -467,7 +467,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2"
+			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/install/x64-Debug"
+			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/install/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -723,7 +723,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Project"
+			"value" : "HomeWork_10.2"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1066,7 +1066,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Project_BINARY_DIR",
+			"name" : "HomeWork_10.2_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1075,10 +1075,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/out/build/x64-Debug"
+			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2/out/build/x64-Debug"
 		},
 		{
-			"name" : "Project_IS_TOP_LEVEL",
+			"name" : "HomeWork_10.2_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1090,7 +1090,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Project_SOURCE_DIR",
+			"name" : "HomeWork_10.2_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1099,7 +1099,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2"
+			"value" : "C:/Users/mrsta/Project/HW_10/HomeWork 10.2/HomeWork 10.2"
 		}
 	],
 	"kind" : "cache",
