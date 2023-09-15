@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(RacingSimulator)
+add_library(ErrorLib STATIC Error.h Error.cpp)
+add_library(LEADERBOARD SHARED Leaderboard.h Leaderboard.cpp)
+add_library(VEHICLESANDTRACKS SHARED VehiclesAndTracks.h VehiclesAndTracks.cpp)
+add_executable(RacingSimulator RacingSimulator.cpp)
+target_link_libraries(RacingSimulator VEHICLESANDTRACKS LEADERBOARD ErrorLib)
