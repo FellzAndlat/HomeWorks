@@ -7,11 +7,13 @@ private:
     int i = 0;
 public:
     smart_array& operator=(const smart_array& src) {
+        delete [] arr;
         size = src.size;
+        i = src.i;
+        arr = new int[size];
         for (int j = 0; j < size; ++j) {
             arr[j] = src.arr[j];
         }
-
         return *this;
     }
     void add_element(int num) {
@@ -52,6 +54,6 @@ int main() {
 
     arr = new_array;
 
-    std::cout << arr.get_element(0) << arr.get_element(1);
+    std::cout << arr.get_element(0) << " " << arr.get_element(1);
     
 }
