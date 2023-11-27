@@ -95,7 +95,19 @@ private:
     unsigned long m_size;
 };
 
-TEST_CASE("List testing", "[l_test]") {
+TEST_CASE("List PopBack testing", "[B_test]") {
+    List ListTest;
+    ListTest.PopBack();
+    CHECK(ListTest.Size() == 0);
+}
+
+TEST_CASE("List PopFront testing", "[F_test]") {
+    List ListTest;
+    ListTest.PopFront();
+    CHECK(ListTest.Size() == 0);
+}
+
+TEST_CASE("List testing", "[A_test]") {
     List ListTest;
     ListTest.PushBack(1);
     CHECK(ListTest.Size() == 1);
