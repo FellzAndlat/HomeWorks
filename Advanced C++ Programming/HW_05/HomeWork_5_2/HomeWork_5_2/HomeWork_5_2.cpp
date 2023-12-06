@@ -17,6 +17,9 @@ private:
 		t& operator [] (int i) {
 			return subarr[i];
 		}
+		t& operator [] (int i) const {
+			return subarr[i];
+		}
 	};
 public:
 	table(t rows, t cols) {
@@ -28,6 +31,9 @@ public:
 		}
 	}
 	submas& operator [] (int i) {
+		return arr[i];
+	}
+	submas& operator [] (int i) const {
 		return arr[i];
 	}
 	int size() {
