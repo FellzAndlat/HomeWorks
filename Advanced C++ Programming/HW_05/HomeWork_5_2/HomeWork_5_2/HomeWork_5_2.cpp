@@ -17,7 +17,7 @@ private:
 		t& operator [] (int i) {
 			return subarr[i];
 		}
-		t& operator [] (int i) const {
+		const t& operator [] (int i) const {
 			return subarr[i];
 		}
 	};
@@ -33,7 +33,7 @@ public:
 	submas& operator [] (int i) {
 		return arr[i];
 	}
-	submas& operator [] (int i) const {
+	const submas& operator [] (int i) const {
 		return arr[i];
 	}
 	int size() {
@@ -55,5 +55,7 @@ int main() {
 
 	t[0][0] = 5;
 	std::cout << t[0][0] << "\n";
-	std::cout << t.size();
+	std::cout << t.size() << "\n";
+	table<int> const A(3, 2);
+	std::cout << A[0][0] << "\n";
 }
