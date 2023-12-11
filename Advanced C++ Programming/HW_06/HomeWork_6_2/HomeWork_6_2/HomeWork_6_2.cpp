@@ -17,5 +17,7 @@ int main()
         set.insert(arr[i]);
     }
     for (auto i : set) std::cout << "[out]: " << i << std::endl;
+
+    delete[] arr;
     return 0;
 }
