@@ -5,6 +5,7 @@
 #include <map>
 #include <vector>
 #include <stdlib.h>
+#include "consts.h"
 
 
 class ini_parser {
@@ -13,7 +14,6 @@ private:
     struct data {
         std::string section;
         std::map <std::string, std::string> value;
-        std::map <std::string, std::string> ::iterator it = value.begin();
         data(std::string section, std::string name, std::string value) {
             this->section = section;
             this->value[name] = value;
@@ -27,17 +27,17 @@ private:
             std::getline(ini, str);
             int temp = 0;
             for (int i = 0; i < str.size(); ++i) {
-                if (str[i] == '[') {
+                if (str[i] == Consts::squareBracketCharacter) {
                     section.clear();
                     section = str;
                     section.erase(0, 1);
                     section.erase(section.size() - 1, 1);
                     break;
                 }
-                else if (str[i] == ';') {
+                else if (str[i] == Consts::semicolonSymbol) {
                     break;
                 }
-                else if (str[i] == '=') {
+                else if (str[i] == Consts::isEqualSymbol) {
                     name.clear();
                     value.clear();
                     name = str;
@@ -45,7 +45,7 @@ private:
                     value = str;
                     value.erase(0, i + 1);
                     for (int j = 0; j < value.size(); ++j) {
-                        if (value[j] == ';') {
+                        if (value[j] == Consts::semicolonSymbol) {
                             value.erase(j, value.size() - j);
                             break;
                         }
@@ -75,9 +75,7 @@ private:
             }
         }
     }
-public:
-    ini_parser(std::string name_file) {
-        ini.open(name_file);
+    void test_file() {
         try {
             if (ini.is_open()) {}
             else {
@@ -87,15 +85,22 @@ public:
         catch (const std::runtime_error& ex) {
             std::cout << ex.what() << std::endl;
         }
+    }
+
+public:
+    ini_parser(const std::string&& name_file) {
+        ini.open(name_file);
+        test_file();
         Grammar_processing();
     }
+    ini_parser() = delete;
 
     template <typename T>
     T get_value(std::string section_name) {
         std::string section, name;
         T value;
         for (int i = 0; i < section_name.size(); ++i) {
-            if (section_name[i] == '.') {
+            if (section_name[i] == Consts::dotSymbol) {
                 section = section_name;
                 section.erase(i, section.size() - i);
                 name = section_name;
@@ -109,16 +114,18 @@ public:
                     if (arr[i].value[name].empty()) {
                         throw std::runtime_error("Проверьте правильность написании имени переменной");
                     }
-                    else if (typeid(T).name() == typeid(int).name()) {
+                    if constexpr (std::is_same_v<T, std::string>) {
+                        return T{ arr[i].value[name] };
+                    }
+                    else if ( typeid(T).name() == typeid(int).name()) {
                         value = std::stoi(arr[i].value[name]);
+                        return value;
                     }
                     else if (typeid(T).name() == typeid(double).name()) {
                         value = std::stod(arr[i].value[name]);
+                        return value;
                     }
-                    //else if (typeid(T).name() == typeid(char).name()) {
-                    //    value = arr[i].value[name];
-                    //}
-                    return value;
+                    return 0;
                 }
                 else if (i == arr.size() - 1){
                     throw std::runtime_error("Проверьте правильность написании секции");
@@ -129,6 +136,7 @@ public:
             std::cout << ex.what() << std::endl;
         }
     }
+    ~ini_parser() = default;
 };
 
 int main() {
@@ -143,4 +151,6 @@ int main() {
     auto value3 = parser.get_value<std::string>("Section2.var2");
     std::cout << value1 << " " << value2 << std::endl;
     std::cout << value3;
+
+    return 0;
 }
