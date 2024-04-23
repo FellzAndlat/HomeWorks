@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{75B614C1-8F07-31DA-9034-E809E877D2FB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule G:/project/Working_with_PostgreSQL_from_C++/libpqxx-7.9.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4 -BG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build --check-stamp-file G:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build/libpqxx-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPack.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPackComponent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckFunctionExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPostgreSQL.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Templates\CPackConfig.cmake.in;G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\include\pqxx\config_cmake.h.in;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\libpqxx-config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\pqxx_cxx_feature_checks.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_INT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CMP.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CONCEPTS.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_PURE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_LIKELY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_MULTIDIM.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_PATH.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_POLL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SLEEP_FOR.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SPAN.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SSIZE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_R.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_S.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_UNREACHABLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\no_need_fslib.cxx;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule G:/project/Working_with_PostgreSQL_from_C++/libpqxx-7.9.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4 -BG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build --check-stamp-file G:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build/libpqxx-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPack.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPackComponent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckFunctionExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPostgreSQL.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Templates\CPackConfig.cmake.in;G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\include\pqxx\config_cmake.h.in;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\libpqxx-config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\pqxx_cxx_feature_checks.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_INT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CMP.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CONCEPTS.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_PURE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_LIKELY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_MULTIDIM.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_PATH.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_POLL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SLEEP_FOR.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SPAN.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SSIZE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_R.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_S.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_UNREACHABLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\no_need_fslib.cxx;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule G:/project/Working_with_PostgreSQL_from_C++/libpqxx-7.9.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4 -BG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build --check-stamp-file G:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build/libpqxx-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPack.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPackComponent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckFunctionExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPostgreSQL.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Templates\CPackConfig.cmake.in;G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\include\pqxx\config_cmake.h.in;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\libpqxx-config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\pqxx_cxx_feature_checks.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_INT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CMP.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CONCEPTS.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_PURE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_LIKELY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_MULTIDIM.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_PATH.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_POLL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SLEEP_FOR.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SPAN.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SSIZE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_R.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_S.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_UNREACHABLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\no_need_fslib.cxx;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule G:/project/Working_with_PostgreSQL_from_C++/libpqxx-7.9.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4 -BG:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build --check-stamp-file G:/project/Working_with_PostgreSQL_from_C++/HomeWork_4/build/libpqxx-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPack.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CPackComponent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckFunctionExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\FindPostgreSQL.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\Internal\FeatureTesting.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.28\Templates\CPackConfig.cmake.in;G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\include\pqxx\config_cmake.h.in;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\libpqxx-config.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\cmake\pqxx_cxx_feature_checks.cmake;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CHARCONV_INT.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CMP.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CONCEPTS.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_PURE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_LIKELY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_MULTIDIM.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_PATH.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_POLL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SLEEP_FOR.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SPAN.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_SSIZE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_R.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_STRERROR_S.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_UNREACHABLE.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx;G:\project\Working_with_PostgreSQL_from_C++\libpqxx-7.9.0\config-tests\no_need_fslib.cxx;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\ZERO_CHECK.vcxproj">
+      <Project>{94901519-B3CD-34B5-80EF-06DFB72F1FAE}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\src\pqxx.vcxproj">
+      <Project>{C2C5EB0C-444C-3FE1-BF9D-5D69BEF405BB}</Project>
+      <Name>pqxx</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\libpqxx-build\test\runner.vcxproj">
+      <Project>{20798469-3519-34C1-9F3E-780702E74FFC}</Project>
+      <Name>runner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

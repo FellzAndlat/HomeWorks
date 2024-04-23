@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\build\CMakeFiles\fc87bf794f0b313ebca86bcd477ff0ae\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A935D3A4-C20B-309C-83A0-625DCD2AC6A7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

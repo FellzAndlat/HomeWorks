@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\project\Working_with_PostgreSQL_from_C++\HomeWork_4\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7F0DD0BA-1631-31AF-8312-28D6A29F44E8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
