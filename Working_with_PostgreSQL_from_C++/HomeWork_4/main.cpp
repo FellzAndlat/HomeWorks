@@ -174,7 +174,7 @@ public:
 			std::cout << "¬ведите id номера который хотите удалить: ";
 			std::cin >> id;
 			tx.exec(
-				"DELETE FROM Phone WHERE id = '" + tx.esc(id) + "';"
+				"DELETE FROM Phone WHERE id = '" + tx.esc(id) + "'"
 			);
 			tx.commit();
 		}
@@ -248,7 +248,7 @@ public:
 						Delete_Phone(temp_id);
 						break;
 					}
-					if (temp == 3) {
+					if (temp == 4) {
 						Delete_Users(temp_id);
 						break;
 					}
