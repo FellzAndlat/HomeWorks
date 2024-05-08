@@ -261,6 +261,7 @@ public:
 		login = l;
 		CreateTables();
 	}
+	~BD() {};
 };
 
 int main() {
@@ -271,10 +272,10 @@ int main() {
 	std::string yes = "да";
 
 	std::string const str = 
-		"host=localhost "
+		"host=192.168.40.100 "
 		"port=5432 "
 		"dbname=hw4 "
-		"user=postgres "
+		"user=fellzandlat "
 		"password=LKPjLe%5";
 
 	BD bd(str);
