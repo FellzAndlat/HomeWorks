@@ -22,19 +22,19 @@ public:
 };
 
 inline void swap_lock(Data& one, Data& two) noexcept{
-    one.mu.lock();
-    two.mu.lock();
+    std::lock(one.mu, two.mu);
+    std::lock_guard lk1(one.mu, std::adopt_lock);
+    std::lock_guard lk2(two.mu, std::adopt_lock);
     std::swap(one.i, two.i);
-    one.mu.unlock();
-    two.mu.unlock();
 }
 inline void swap_scoped_lock(Data& one, Data& two) noexcept {
     std::scoped_lock lock(one.mu, two.mu);
     std::swap(one.i, two.i);
 }
 inline void swap_unique_lock(Data& one, Data& two) noexcept {
-    std::unique_lock <std::mutex> lk2(two.mu);
-    std::unique_lock <std::mutex> lk1(one.mu);
+    std::unique_lock <std::mutex> lk2(two.mu, std::defer_lock);
+    std::unique_lock <std::mutex> lk1(one.mu, std::defer_lock);
+    std::lock(lk1, lk2);
     std::swap(one.i, two.i);
 }
 
