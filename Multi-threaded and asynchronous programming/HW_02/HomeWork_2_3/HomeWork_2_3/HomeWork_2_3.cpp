@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <mutex>
 #include <thread>
+#include <string>
 
 class Data {
 private:
@@ -38,8 +39,18 @@ inline void swap_unique_lock(Data& one, Data& two) noexcept {
     std::swap(one.i, two.i);
 }
 
+void you_fagot(std::string arr) {
+    std::cout << arr << "\n";
+}
+
 int main()
 {
+
+    std::string temp = "Ты пидор";
+
+    you_fagot(temp);
+
+
     Data one(5);
     Data two(3);
     std::cout << "swap lock" << std::endl;
