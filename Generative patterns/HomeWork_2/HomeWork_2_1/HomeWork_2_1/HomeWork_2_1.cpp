@@ -35,7 +35,42 @@ public:
     }
 };
 
+class Paragraph : public DecoratedText {
+public:
+    explicit Paragraph(Text* text) : DecoratedText(text) {}
+    void render(const std::string& data) const {
+        std::cout << "<p>";
+        text_->render(data);
+        std::cout << "<p>" << std::endl;
+    }
+};
+
+class Reversed : public DecoratedText {
+public:
+    explicit Reversed(Text* text) : DecoratedText(text) {}
+    void render(const std::string& data) const {
+        for (int i = data.size() - 1; i >= 0; --i) {
+            std::cout << data[i];
+        }
+        std::cout << std::endl;
+    }
+};
+
+class Link : public DecoratedText {
+public:
+    explicit Link(Text* text) : DecoratedText(text) {}
+    void render(const std::string& link, const std::string& data) const {
+        std::cout << "<a href=" << link << ">" << data << "</a>" << std::endl;
+    }
+};
+
 int main() {
-    auto text_block = new ItalicText(new BoldText(new Text()));
-    text_block->render("Hello world");
+    auto text_block1 = new Paragraph(new Text());
+    text_block1->render("Hello world");
+    auto text_block2 = new Reversed(new Text());
+    text_block2->render("Hello world");
+    auto text_block3 = new Link(new Text());
+    text_block3->render("netology.ru", "Hello world");
+
+    return 0;
 }
