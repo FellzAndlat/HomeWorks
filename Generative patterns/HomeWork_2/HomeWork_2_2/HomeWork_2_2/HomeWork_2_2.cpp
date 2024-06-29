@@ -9,7 +9,7 @@ public:
     }
 };
 
-class CacheProxyDB : VeryHeavyDatabase {
+class CacheProxyDB : public VeryHeavyDatabase {
 public:
     explicit CacheProxyDB(VeryHeavyDatabase* real_object) : real_db_(real_object) {}
     std::string GetData(const std::string& key) noexcept {
@@ -28,7 +28,7 @@ private:
     VeryHeavyDatabase* real_db_;
 };
 
-class TestDB : VeryHeavyDatabase {
+class TestDB : public VeryHeavyDatabase {
 public:
     explicit TestDB(VeryHeavyDatabase* real_object) : real_db_(real_object) {}
     std::string GetData(const std::string& key) noexcept {
@@ -38,12 +38,32 @@ private:
     VeryHeavyDatabase* real_db_;
 };
 
+class OneShotDB : public VeryHeavyDatabase {
+public:
+    explicit OneShotDB(VeryHeavyDatabase* real_object, size_t shots = 1)
+        : real_db_(real_object), remaining_shots_(shots) {}
+
+    std::string GetData(const std::string& key) noexcept {
+        if (remaining_shots_ > 0) {
+            --remaining_shots_;
+            return real_db_->GetData(key);
+        }
+        else {
+            return "error";
+        }
+    }
+
+private:
+    VeryHeavyDatabase* real_db_;
+    size_t remaining_shots_;
+};
+
 int main() {
     auto real_db = VeryHeavyDatabase();
-    auto cached_db = CacheProxyDB(std::addressof(real_db));
-    auto test_db = TestDB(std::addressof(real_db));
-    std::cout << cached_db.GetData("key") << std::endl;
-    std::cout << cached_db.GetData("key") << std::endl;
-    std::cout << test_db.GetData("key") << std::endl;
+    auto limit_db = OneShotDB(std::addressof(real_db), 2);
+    std::cout << limit_db.GetData("value") << std::endl;
+    std::cout << limit_db.GetData("value") << std::endl;
+    std::cout << limit_db.GetData("value") << std::endl;
+
     return 0;
 }
