@@ -1,0 +1,10 @@
+# ninja log v6
+7	745	7434483785532923	build.ninja	6d5cb539414c5a75
+24	534	7434483792460627	HelloGraphicWorld_autogen/timestamp	c4415cf070756b3
+24	534	7434483792460627	HelloGraphicWorld_autogen/mocs_compilation.cpp	c4415cf070756b3
+24	534	7434483792460627	C:/Users/mrsta/HomeWorks/QT/HomeWork 1.0/HelloGraphicWorld/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HelloGraphicWorld_autogen/timestamp	c4415cf070756b3
+24	534	7434483792460627	C:/Users/mrsta/HomeWorks/QT/HomeWork 1.0/HelloGraphicWorld/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HelloGraphicWorld_autogen/mocs_compilation.cpp	c4415cf070756b3
+540	2548	7434483793115381	CMakeFiles/HelloGraphicWorld.dir/HelloGraphicWorld_autogen/mocs_compilation.cpp.obj	a6185ddd29142689
+545	2573	7434483793175432	CMakeFiles/HelloGraphicWorld.dir/mainwindow.cpp.obj	aa2c149f927de15a
+543	5737	7434483793145411	CMakeFiles/HelloGraphicWorld.dir/main.cpp.obj	c4891cdc3264dc5f
+5741	5933	7434483845127201	HelloGraphicWorld.exe	c7ea00c36f40055e
