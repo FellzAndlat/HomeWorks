@@ -1,0 +1,11 @@
+# ninja log v5
+5	135	0	CMakeFiles/HelloGraphicWorld_autogen	d99bcb525d457222
+5	135	0	HelloGraphicWorld_autogen/mocs_compilation.cpp	d99bcb525d457222
+5	135	0	HelloGraphicWorld_autogen/include/ui_mainwindow.h	d99bcb525d457222
+5	135	0	C:/Users/mrsta/HomeWorks/QT/HomeWork 1.0/HelloGraphicWorld/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/CMakeFiles/HelloGraphicWorld_autogen	d99bcb525d457222
+5	135	0	C:/Users/mrsta/HomeWorks/QT/HomeWork 1.0/HelloGraphicWorld/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/HelloGraphicWorld_autogen/mocs_compilation.cpp	d99bcb525d457222
+5	135	0	C:/Users/mrsta/HomeWorks/QT/HomeWork 1.0/HelloGraphicWorld/build/Desktop_x86_windows_msvc2022_pe_64bit-Debug/HelloGraphicWorld_autogen/include/ui_mainwindow.h	d99bcb525d457222
+135	876	7440363183398084	CMakeFiles/HelloGraphicWorld.dir/HelloGraphicWorld_autogen/mocs_compilation.cpp.obj	a3f89701f5da1a68
+141	948	7440363184118244	CMakeFiles/HelloGraphicWorld.dir/mainwindow.cpp.obj	7237b48304b6e926
+138	2423	7440363198849206	CMakeFiles/HelloGraphicWorld.dir/main.cpp.obj	c29588388d0b7130
+2426	2737	7440363201783357	HelloGraphicWorld.exe	f8fe901bce0353f8
