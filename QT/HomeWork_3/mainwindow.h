@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,7 +21,10 @@ public:
 private slots:
     void on_pb_connect_clicked();
 
+    void on_pb_cancel_clicked();
+
 private:
     Ui::MainWindow *ui;
+    Dialog* newWindow;
 };
 #endif // MAINWINDOW_H
