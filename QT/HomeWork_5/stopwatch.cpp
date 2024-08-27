@@ -28,8 +28,11 @@ void Stopwatch::lap() {
     if(running) {
         ++lapCount;
         int lapTime = elapsedTime;
-        lastLapTime = elapsedTime;
+        if (lapCount != 1) {
+            lapTime = lapTime - lastLapTime;
+        }
         emit lapRecorded(QString("Круг %1, время: %2 сек").arg(lapCount).arg(lapTime / 1000.0, 0, 'f', 1));
+        lastLapTime = elapsedTime;
     }
 }
 void Stopwatch::updateTime() {

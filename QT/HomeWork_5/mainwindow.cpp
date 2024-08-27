@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->time->setText("00:00:0");
     ui->startStop->setText("Старт");
-    ui->clear->setText("Отчистить");
+    ui->clear->setText("Очистить");
     ui->lap->setText("Круг");
     ui->lap->setEnabled(false);
 }
