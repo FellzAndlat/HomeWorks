@@ -37,7 +37,6 @@ void MainWindow::on_startStop_clicked() {
 
 void MainWindow::on_clear_clicked() {
     stopwatch_->reset();
-    ui->textBrowser->clear();
     ui->startStop->setText("старт");
 }
 
