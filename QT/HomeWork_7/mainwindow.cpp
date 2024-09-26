@@ -239,25 +239,31 @@ void MainWindow::on_pb_start_clicked()
 
 }
 
-void MainWindow::plotGraph(QVector<double> data)
+void MainWindow::plotGraph(const QVector<double>& data)
 {
+    if (graphWindow != nullptr) {
+        delete chartView->chart();
+    } else {
+        graphWindow = new QMainWindow(this);
+        chartView = new QChartView();
+        graphWindow->setCentralWidget(chartView);
+        graphWindow->resize(800, 600);
+    }
+
     QChart *chart = new QChart();
     QLineSeries *series = new QLineSeries();
-
-    for(int i = 0; i < data.size(); ++i) {
+    for (int i = 0; i < data.size(); ++i) {
         series->append(i, data[i]);
     }
 
     chart->addSeries(series);
     chart->createDefaultAxes();
 
-    QChartView *chartView = new QChartView(chart);
+    chartView->setChart(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
 
-    QMainWindow *graphWindow = new QMainWindow(this);
-    graphWindow->setCentralWidget(chartView);
-    graphWindow->resize(800, 600);
     graphWindow->show();
+
 }
 
 

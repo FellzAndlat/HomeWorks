@@ -43,7 +43,7 @@ public:
 private slots:
     void on_pb_path_clicked();
     void on_pb_start_clicked();
-    void plotGraph(QVector<double> data);
+    void plotGraph(const QVector<double>& data);
 
 
 private:
@@ -54,6 +54,8 @@ private:
     QVector<uint32_t> readData;
     QVector<double> procesData;
     QVector<double> mins, maxs;
+    QMainWindow *graphWindow = nullptr;
+    QChartView *chartView = nullptr;
 
 signals:
     void dataReadyForPlot(QVector<double> data);
