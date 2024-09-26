@@ -251,7 +251,8 @@ void MainWindow::plotGraph(const QVector<double>& data)
     }
 
     QChart *chart = new QChart();
-    QLineSeries *series = new QLineSeries();
+    QLineSeries *series = new QLineSeries(chart);
+
     for (int i = 0; i < data.size(); ++i) {
         series->append(i, data[i]);
     }
