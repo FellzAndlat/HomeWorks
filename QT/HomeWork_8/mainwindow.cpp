@@ -45,6 +45,12 @@ MainWindow::MainWindow(QWidget *parent)
      */
     connect(dataBase, &DataBase::sig_SendStatusConnection, this, &MainWindow::ReceiveStatusConnectionToDB);
 
+    connect(this, &MainWindow::sig_RequestToDb, dataBase, &DataBase::RequestToDB);
+
+    connect(dataBase, &DataBase::sig_SendDataFromDB, this, &MainWindow::ScreenDataFromDB);
+
+    connect(ui->pb_clear, &QPushButton::clicked, this, &MainWindow::on_pb_clear_clicked);
+
 }
 
 MainWindow::~MainWindow()
@@ -99,9 +105,8 @@ void MainWindow::on_act_connect_triggered()
  */
 void MainWindow::on_pb_request_clicked()
 {
-
-    ///Тут должен быть код ДЗ
-
+    QString filter = ui->cb_category->currentText();
+    emit sig_RequestToDb(filter);
 }
 
 /*!
@@ -109,12 +114,25 @@ void MainWindow::on_pb_request_clicked()
  * \param widget
  * \param typeRequest
  */
-void MainWindow::ScreenDataFromDB(const QTableWidget *widget, int typeRequest)
+void MainWindow::ScreenDataFromDB(QSqlQueryModel *model, QString request)
 {
+    ui->tb_result->clearContents();
+    ui->tb_result->setRowCount(0);
 
-    ///Тут должен быть код ДЗ
+    if (!model) {
+        ui->tb_result->setRowCount(1);
+        ui->tb_result->setItem(0, 0, new QTableWidgetItem("Нет данных"));
+        return;
+    }
 
+    ui->tb_result->setColumnCount(2);
+    ui->tb_result->setHorizontalHeaderLabels(QStringList() << "Название фильма" << "Описание фильма");
 
+    for (int i = 0; i < model->rowCount(); ++i) {
+        ui->tb_result->insertRow(i);
+        ui->tb_result->setItem(i, 0, new QTableWidgetItem(model->data(model->index(i, 0)).toString()));
+        ui->tb_result->setItem(i, 1, new QTableWidgetItem(model->data(model->index(i, 1)).toString()));
+    }
 }
 /*!
  * \brief Метод изменяет стотояние формы в зависимости от статуса подключения к БД
@@ -137,6 +155,11 @@ void MainWindow::ReceiveStatusConnectionToDB(bool status)
         msg->exec();
     }
 
+}
+void MainWindow::on_pb_clear_clicked()
+{
+    ui->tb_result->clearContents();
+    ui->tb_result->setRowCount(0);
 }
 
 

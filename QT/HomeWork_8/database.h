@@ -3,6 +3,9 @@
 
 #include <QTableWidget>
 #include <QObject>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlError>
+#include <QSqlQueryModel>
 
 
 
@@ -49,7 +52,7 @@ public:
 
 signals:
 
-   void sig_SendDataFromDB(const QTableWidget *tableWg, int typeR);
+   void sig_SendDataFromDB(QSqlQueryModel *model, QString request);
    void sig_SendStatusConnection(bool);
 
 

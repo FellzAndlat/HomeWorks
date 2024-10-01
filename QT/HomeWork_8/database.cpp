@@ -67,8 +67,28 @@ void DataBase::DisconnectFromDataBase(QString nameDb)
  */
 void DataBase::RequestToDB(QString request)
 {
+    QSqlQueryModel *queryModel = new QSqlQueryModel(this);
 
-    ///Тут должен быть код ДЗ
+    if (request == "Все") {
+        queryModel->setQuery("SELECT title, description FROM film", *dataBase);
+    } else if (request == "Комедия") {
+        queryModel->setQuery("SELECT title, description FROM film f "
+                             "JOIN film_category fc ON f.film_id = fc.film_id "
+                             "JOIN category c ON c.category_id = fc.category_id "
+                             "WHERE c.name = 'Comedy'", *dataBase);
+    } else if (request == "Ужасы") {
+        queryModel->setQuery("SELECT title, description FROM film f "
+                             "JOIN film_category fc ON f.film_id = fc.film_id "
+                             "JOIN category c ON c.category_id = fc.category_id "
+                             "WHERE c.name = 'Horror'", *dataBase);
+    }
+
+    if (queryModel->rowCount() == 0) {
+        emit sig_SendDataFromDB(nullptr, request);
+        return;
+    }
+
+    emit sig_SendDataFromDB(queryModel, request);
 
 }
 
