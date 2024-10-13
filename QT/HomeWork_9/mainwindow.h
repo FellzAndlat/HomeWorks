@@ -23,6 +23,8 @@ private slots:
     void on_pb_start_clicked();
     void DisplayTime(QDateTime data);
     void on_pb_stop_clicked();
+    void DisplayReceivedMessage(QString message, QString sender, int size);
+    void on_pb_sendMessage_clicked();
 
 private:
     Ui::MainWindow *ui;

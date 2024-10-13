@@ -21,12 +21,32 @@
        <string>Принятые данные</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QTextEdit" name="te_result"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Отправленные данные</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="le_message"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_sendMessage">
+      <property name="text">
+       <string>Отправить Датаграмму</string>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pb_stop">

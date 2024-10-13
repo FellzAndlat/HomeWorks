@@ -31,15 +31,13 @@ void UDPworker::InitSocket()
 void UDPworker::ReadDatagram(QNetworkDatagram datagram)
 {
 
-    QByteArray data;
-    data = datagram.data();
+    QByteArray data = datagram.data();
+    QString message = QString::fromUtf8(data);
 
+    QString sender = datagram.senderAddress().toString();
+    int size = data.size();
 
-    QDataStream inStr(&data, QIODevice::ReadOnly);
-    QDateTime dateTime;
-    inStr >> dateTime;
-
-    emit sig_sendTimeToGUI(dateTime);
+    emit sig_sendMessageToGUI(message, sender, size);
 }
 /*!
  * @brief Метод осуществляет опередачу датаграммы
@@ -55,7 +53,7 @@ void UDPworker::SendDatagram(QByteArray data)
 /*!
  * @brief Метод осуществляет чтение датаграм из сокета
  */
-void UDPworker::readPendingDatagrams( void )
+void UDPworker::readPendingDatagrams()
 {
     /*
      *  Производим чтение принятых датаграмм

@@ -26,6 +26,7 @@ private:
 
 signals:
     void sig_sendTimeToGUI(QDateTime data);
+    void sig_sendMessageToGUI(QString message, QString sender, int size);
 
 };
 
