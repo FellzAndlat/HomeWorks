@@ -204,8 +204,6 @@ void MainWindow::on_pb_request_clicked()
 
    }
 
-   client->SendRequest(header);
-
 }
 
 /*!
