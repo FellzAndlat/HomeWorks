@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-15683aadd91086aa7d54.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AirportInspector",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AirportInspector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AirportInspector-Release-c8f39519c71b96f8348d.json",
+					"name" : "AirportInspector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AirportInspector_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AirportInspector_autogen-Release-8efa7f2253fc77dea053.json",
+					"name" : "AirportInspector_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AirportInspector_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AirportInspector_autogen_timestamp_deps-Release-346fe2c3c6229cbc99b8.json",
+					"name" : "AirportInspector_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/mrsta/HomeWorks/QT/AirportInspector/build/Desktop_Qt_6_7_2_MinGW_64_bit-Release",
+		"source" : "C:/Users/mrsta/HomeWorks/QT/AirportInspector"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
