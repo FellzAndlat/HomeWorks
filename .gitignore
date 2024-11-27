@@ -1188,6 +1188,8 @@ FodyWeavers.xsd
 *Debug/
 *debug/
 
+!/QT/AirportInspector/library/
+
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
