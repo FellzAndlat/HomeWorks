@@ -1190,6 +1190,14 @@ FodyWeavers.xsd
 
 !/QT/AirportInspector/library/
 
+# Unrial Engine
+.vs
+*.sln
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
