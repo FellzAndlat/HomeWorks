@@ -2,6 +2,7 @@
 
 
 #include "CppBaseActor.h"
+#include "Engine/World.h"
 
 // Sets default values
 ACppBaseActor::ACppBaseActor()
@@ -17,7 +18,13 @@ ACppBaseActor::ACppBaseActor()
 void ACppBaseActor::BeginPlay()
 {
 	Super::BeginPlay();
+	InitialLocation = GetActorLocation();
 	
+}
+
+void ACppBaseActor::SinMovement() 
+{
+	SetActorLocation(FVector(InitialLocation.X, InitialLocation.Y, InitialLocation.Z = InitialLocation.Z + (FPlatformMath::Sin(Frequency * GetWorld()->GetTimeSeconds()) * Amplitude)));
 }
 
 // Called every frame

@@ -6,22 +6,6 @@
 #include "GameFramework/Actor.h"
 #include "CppBaseActor.generated.h"
 
-USTRUCT(BlueprintType)
-struct FTransformStruct 
-{
-	GENERATED_USTRUCT_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FVector CurrentLocation = FVector::ZeroVector;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FRotator CurrentRotation = FRotator::ZeroRotator;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FVector CurrentScale = FVector(1.0f, 1.0f, 1.0f);
-
-};
-
 UENUM(BlueprintType)
 enum class EMovementState : uint8
 {
@@ -43,7 +27,16 @@ protected:
 	virtual void BeginPlay() override;
 
 	UFUNCTION(BlueprintCallable)
+	void SinMovement();
+
+	UFUNCTION(BlueprintCallable)
 	void showInformation();
+
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+private:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
 	UPROPERTY(EditInstanceOnly)
@@ -54,11 +47,10 @@ protected:
 	float CurrentHealth = 57.54687;
 	UPROPERTY(EditInstanceOnly)
 	bool IsAlive = true;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-private:
-	
+	FVector InitialLocation = FVector::ZeroVector;
+	UPROPERTY(EditInstanceOnly)
+	double Amplitude = 0;
+	UPROPERTY(EditInstanceOnly)
+	double Frequency = 0;
 
 };
