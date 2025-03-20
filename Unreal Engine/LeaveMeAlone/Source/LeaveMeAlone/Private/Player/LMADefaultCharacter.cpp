@@ -6,6 +6,7 @@
 #include "Components/DecalComponent.h"
 #include "Components/LMAHealthComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/LMAWeaponComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
@@ -23,6 +24,8 @@ ALMADefaultCharacter::ALMADefaultCharacter()
 	CameraComponent->SetupAttachment(SpringArmComponent);
 
 	HealthComponent = CreateDefaultSubobject<ULMAHealthComponent>("HealthComponent");;
+
+	WeaponComponent = CreateDefaultSubobject<ULMAWeaponComponent>("Weapon");
 
 	SpringArmComponent->SetUsingAbsoluteRotation(true);
 	SpringArmComponent->TargetArmLength = ArmLength;
@@ -71,6 +74,8 @@ void ALMADefaultCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAxis("Zoom", this, &ALMADefaultCharacter::Zoom);
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ALMADefaultCharacter::StartSprint);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ALMADefaultCharacter::StopSprint);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &ULMAWeaponComponent::Fire);
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &ULMAWeaponComponent::Reload);
 }
 
 void ALMADefaultCharacter::MoveForward(float Value) {
