@@ -8,6 +8,8 @@
 
 class USkeletalMeshComponent;
 
+DECLARE_MULTICAST_DELEGATE(FOnAmmoEmptyDelegate);
+
 USTRUCT(BlueprintType)
 struct FAmmoWeapon
 {
@@ -33,6 +35,8 @@ public:
 
 	void Fire();
 	void ChangeClip();
+	bool ClipFull = true;
+	FOnAmmoEmptyDelegate OnAmmoEmpty;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")

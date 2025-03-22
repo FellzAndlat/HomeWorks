@@ -17,7 +17,9 @@ class LEAVEMEALONE_API ULMAWeaponComponent : public UActorComponent
 public:	
 	ULMAWeaponComponent();
 	void Fire();
+	void StopTimerFireRate();
 	void Reload();
+	void StartTimerFireRate();
 protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
@@ -32,9 +34,11 @@ private:
 	ALMABaseWeapon* Weapon = nullptr;
 
 	bool AnimReloading = false;
+	FTimerHandle TimerHandle_Fire;
 
 	void SpawnWeapon();
 	void InitAnimNotify();
+	void OnAmmoDepleted();
 
 	void OnNotifyReloadFinished(USkeletalMeshComponent* SkeletalMesh);
 	bool CanReload() const;

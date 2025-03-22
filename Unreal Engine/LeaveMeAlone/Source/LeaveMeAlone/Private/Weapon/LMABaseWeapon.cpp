@@ -56,6 +56,8 @@ void ALMABaseWeapon::Shoot()
 void ALMABaseWeapon::ChangeClip()
 {
 	CurrentAmmoWeapon.Bullets = AmmoWeapon.Bullets;
+	ClipFull = true;
+	UE_LOG(LogWeapon, Display, TEXT("Bullets = %s"), *FString::FromInt(CurrentAmmoWeapon.Bullets));
 }
 
 bool ALMABaseWeapon::IsCurrentClipEmpty() const
@@ -66,10 +68,12 @@ bool ALMABaseWeapon::IsCurrentClipEmpty() const
 void ALMABaseWeapon::DecrementBullets()
 {
 	CurrentAmmoWeapon.Bullets--;
+	ClipFull = false;
 	UE_LOG(LogWeapon, Display, TEXT("Bullets = %s"), *FString::FromInt(CurrentAmmoWeapon.Bullets));
 
 	if (IsCurrentClipEmpty()) 
 	{
-		ChangeClip();
+		UE_LOG(LogTemp, Warning, TEXT("Out of ammo!"));
+		OnAmmoEmpty.Broadcast();
 	}
 }

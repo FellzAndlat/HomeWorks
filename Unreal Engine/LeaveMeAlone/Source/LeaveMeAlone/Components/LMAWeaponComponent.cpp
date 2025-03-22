@@ -20,10 +20,27 @@ void ULMAWeaponComponent::Fire()
 	}
 }
 
+void ULMAWeaponComponent::StopTimerFireRate()
+{
+	GetWorld()->GetTimerManager().ClearTimer(TimerHandle_Fire);
+}
+
+void ULMAWeaponComponent::StartTimerFireRate() 
+{
+	Fire();
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_Fire, this, &ULMAWeaponComponent::Fire, 0.1f, true);
+}
+
 void ULMAWeaponComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	SpawnWeapon();
+	InitAnimNotify();
+}
+
+void ULMAWeaponComponent::OnAmmoDepleted() {
+	UE_LOG(LogTemp, Warning, TEXT("Ammo depleted! Reload required."));
+	Reload();
 }
 
 void ULMAWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -43,11 +60,16 @@ void ULMAWeaponComponent::SpawnWeapon()
 			Weapon->AttachToComponent(Character->GetMesh(), AttachmentRules, "r_Weapon_Socket");
 		}
 	}
+	Weapon->OnAmmoEmpty.AddUObject(this, &ULMAWeaponComponent::OnAmmoDepleted);
 }
 
 void ULMAWeaponComponent::InitAnimNotify()
 {
-	if (!ReloadMontage)return;
+	if (!ReloadMontage) 
+	{ 
+		UE_LOG(LogTemp, Error, TEXT("ReloadMontage is nullptr!"));
+		return;
+	}
 	const auto NotifiesEvents = ReloadMontage->Notifies;
 	for (auto NotifyEvent : NotifiesEvents)
 	{
@@ -71,7 +93,11 @@ void ULMAWeaponComponent::OnNotifyReloadFinished(USkeletalMeshComponent* Skeleta
 
 bool ULMAWeaponComponent::CanReload() const
 {
-	return !AnimReloading;
+	if (!AnimReloading && !Weapon->ClipFull)
+	{
+		return true;
+	}
+	return false;
 }
 
 void ULMAWeaponComponent::Reload()
