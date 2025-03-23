@@ -39,7 +39,6 @@ void ULMAWeaponComponent::BeginPlay()
 }
 
 void ULMAWeaponComponent::OnAmmoDepleted() {
-	UE_LOG(LogTemp, Warning, TEXT("Ammo depleted! Reload required."));
 	Reload();
 }
 
@@ -66,8 +65,7 @@ void ULMAWeaponComponent::SpawnWeapon()
 void ULMAWeaponComponent::InitAnimNotify()
 {
 	if (!ReloadMontage) 
-	{ 
-		UE_LOG(LogTemp, Error, TEXT("ReloadMontage is nullptr!"));
+	{
 		return;
 	}
 	const auto NotifiesEvents = ReloadMontage->Notifies;
@@ -107,5 +105,16 @@ void ULMAWeaponComponent::Reload()
 	AnimReloading = true;
 	ACharacter* Character = Cast<ACharacter>(GetOwner());
 	Character->PlayAnimMontage(ReloadMontage);
+}
+
+bool ULMAWeaponComponent::GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon)
+const
+{
+	if (Weapon)
+	{
+		AmmoWeapon = Weapon->GetCurrentAmmoWeapon();
+		return true;
+	}
+	return false;
 }
 

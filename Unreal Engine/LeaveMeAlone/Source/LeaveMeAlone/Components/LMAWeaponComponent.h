@@ -8,6 +8,7 @@
 
 class ALMABaseWeapon;
 class UAnimeMontage;
+struct FAmmoWeapon;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class LEAVEMEALONE_API ULMAWeaponComponent : public UActorComponent
@@ -17,9 +18,15 @@ class LEAVEMEALONE_API ULMAWeaponComponent : public UActorComponent
 public:	
 	ULMAWeaponComponent();
 	void Fire();
+	UFUNCTION(BlueprintCallable)
+	void StopFire() { 
+		UE_LOG(LogTemp, Warning, TEXT("StopFire"));
+		StopTimerFireRate(); }
 	void StopTimerFireRate();
 	void Reload();
 	void StartTimerFireRate();
+	UFUNCTION(BlueprintCallable)
+	bool GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const;
 protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")

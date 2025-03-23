@@ -85,8 +85,8 @@ private:
 	void Zoom(float Value);
 	void StartSprint();
 	void StopSprint();
+	UFUNCTION()
 	void OnDeath();
 	void RotationPlayerOnCursor();
-	void OnHealthChanged(float NewHealth);
 	void UpdateStamina(float DeltaTime);
 };

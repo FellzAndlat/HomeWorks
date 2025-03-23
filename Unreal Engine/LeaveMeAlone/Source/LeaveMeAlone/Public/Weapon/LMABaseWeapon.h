@@ -35,6 +35,7 @@ public:
 
 	void Fire();
 	void ChangeClip();
+	FAmmoWeapon GetCurrentAmmoWeapon() const { return CurrentAmmoWeapon; }
 	bool ClipFull = true;
 	FOnAmmoEmptyDelegate OnAmmoEmpty;
 

@@ -48,11 +48,7 @@ void ALMADefaultCharacter::BeginPlay()
 	if (CursorMaterial) {
 		CurrentCursor = UGameplayStatics::SpawnDecalAtLocation(GetWorld(), CursorMaterial, CursorSize, FVector(0));
 	}
-
-	OnHealthChanged(HealthComponent->GetHealth());
-	HealthComponent->OnDeath.AddUObject(this, &ALMADefaultCharacter::OnDeath);
-	HealthComponent->OnHealthChanged.AddUObject(this, &ALMADefaultCharacter::OnHealthChanged);
-	
+	HealthComponent->OnDeath.AddDynamic(this, &ALMADefaultCharacter::OnDeath);
 }
 
 void ALMADefaultCharacter::Tick(float DeltaTime)
@@ -91,7 +87,6 @@ void ALMADefaultCharacter::Zoom(float Value) {
 	float NewDistance = SpringArmComponent->TargetArmLength - Value * ZoomSpeed;
 	SpringArmComponent->TargetArmLength = FMath::Clamp(NewDistance, ArmLengtMin, ArmLengtMax);
 }
-
 void ALMADefaultCharacter::OnDeath()
 {
 	CurrentCursor->DestroyRenderState_Concurrent();
@@ -118,11 +113,6 @@ void ALMADefaultCharacter::RotationPlayerOnCursor()
 			CurrentCursor->SetWorldLocation(ResultHit.Location);
 		}
 	}
-}
-
-void ALMADefaultCharacter::OnHealthChanged(float NewHealth)
-{
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Health = %f"), NewHealth));
 }
 
 void ALMADefaultCharacter::StartSprint() 
