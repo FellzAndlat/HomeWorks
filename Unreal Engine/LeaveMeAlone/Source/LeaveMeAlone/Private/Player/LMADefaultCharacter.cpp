@@ -121,6 +121,7 @@ void ALMADefaultCharacter::StartSprint()
 	{
 		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 		SprintStatus = true;
+		WeaponComponent->SetStaminaStatus(SprintStatus);
 	}
 }
 
@@ -128,6 +129,7 @@ void ALMADefaultCharacter::StopSprint()
 {
 	GetCharacterMovement()->MaxWalkSpeed = 300.0f;
 	SprintStatus = false;
+	WeaponComponent->SetStaminaStatus(SprintStatus);
 }
 
 void ALMADefaultCharacter::UpdateStamina(float DeltaTime)
@@ -154,6 +156,5 @@ void ALMADefaultCharacter::UpdateStamina(float DeltaTime)
 	if (OldStamina != Stamina)
 	{
 		OnStaminaChanged.Broadcast(Stamina);
-		GEngine->AddOnScreenDebugMessage(-1, 0.1f, FColor::Green, FString::Printf(TEXT("Stamina: %f"), Stamina));
 	}	
 }

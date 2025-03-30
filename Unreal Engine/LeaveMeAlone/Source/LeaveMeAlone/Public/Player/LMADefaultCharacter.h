@@ -68,7 +68,6 @@ public:
 	UFUNCTION()
 	ULMAHealthComponent* GetHealthComponent() const { return HealthComponent; }
 
-
 private:
 	float YRotation = -75.0f;
 	float ArmLength = 1400.0f;

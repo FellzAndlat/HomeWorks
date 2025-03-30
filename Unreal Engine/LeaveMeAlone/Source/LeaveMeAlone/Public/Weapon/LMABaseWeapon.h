@@ -7,6 +7,8 @@
 #include "LMABaseWeapon.generated.h"
 
 class USkeletalMeshComponent;
+class USoundWave;
+class UNiagaraSystem;
 
 DECLARE_MULTICAST_DELEGATE(FOnAmmoEmptyDelegate);
 
@@ -47,10 +49,20 @@ protected:
 	USkeletalMeshComponent* WeaponComponent;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
+	USoundWave* ShootWave;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
+	UNiagaraSystem* TraceEffect;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
+	FString TraceName = "Tracer";
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
 	float TraceDistance = 800.0f;
 
 	virtual void BeginPlay() override;
 	
+	void SpawnTrace(const FVector& TraceStart, const FVector& TraceEnd);
 	void Shoot();
 	void DecrementBullets();
 	bool IsCurrentClipEmpty() const;

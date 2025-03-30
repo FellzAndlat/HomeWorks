@@ -27,12 +27,18 @@ public:
 	void StartTimerFireRate();
 	UFUNCTION(BlueprintCallable)
 	bool GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const;
+	void SetStaminaStatus(bool StaminaStat) { StaminaStatus = StaminaStat; }
 protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 	TSubclassOf<ALMABaseWeapon> WeaponClass;
+
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 	UAnimMontage* ReloadMontage;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	UAnimMontage* FireMontage;
+
 	virtual void BeginPlay() override;
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -42,6 +48,7 @@ private:
 
 	bool AnimReloading = false;
 	FTimerHandle TimerHandle_Fire;
+	bool StaminaStatus = false;
 
 	void SpawnWeapon();
 	void InitAnimNotify();
