@@ -1,0 +1,27 @@
+// LeaveMeAlone Game by Netologiya. All RightsReserved
+
+
+#include "Enemy/LMAEnemyCharacter.h"
+#include "Components/LMAHealthComponent.h"
+#include "BehaviorTree/BehaviorTree.h"
+
+ALMAEnemyCharacter::ALMAEnemyCharacter()
+{
+	PrimaryActorTick.bCanEverTick = true;
+
+	HealthComponent = CreateDefaultSubobject<ULMAHealthComponent>("HealthComponent");
+
+}
+
+void ALMAEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
+
+void ALMAEnemyCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+
